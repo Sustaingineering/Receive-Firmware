@@ -35,3 +35,11 @@ And so on.
 **DO NOT COMMIT THIS FILE.** It contains credentials that grants admin access to the Firebase instance. 
 
 You can generate one within the Firebase console. Put it in the `scripts/` directory. 
+
+## Note about running in the background
+
+If you're using a Linux machine, you can run the script in the background with a `&` postfix to the command. But if you want to also log the script output, you'll have to set a flag to unbuffer the script output. The full command, using the settings from the second example above, would be:
+```bash
+python -u receive.py /dev/cu.modem115 9600 a >> output.log &
+```
+You can then grab the job PID by running `jobs -l` and kill it with `kill $PID`. 
