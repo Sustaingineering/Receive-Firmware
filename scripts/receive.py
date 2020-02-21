@@ -71,7 +71,8 @@ if __name__ == "__main__":
 
     while True:
         line = serial_handler.get_line_from_serial()
-        print(line)
+        if line != "\n":
+            print(line)
         if validate_valid_csv(line, len(ORDER)):
             json = parse_csv(line, ORDER)
             firebase_handler.send_data(sys.argv[3], json)
