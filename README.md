@@ -4,6 +4,11 @@ This firmware is currently configured to run on an Arduino Uno, but since it's a
 
 At the moment, the firmware is intended to handle each message it receives in a stack fashion, at which point it will print to its serial port. A python script should be listening to that port to handle the messages and upload it to Firebase accordingly.
 
+Note that this repo contains submodules. Clone it recursively to build successfully:
+```
+git clone --recurse-submodules https://github.com/Sustaingineering/Receive-Firmware.git
+```
+
 ## Building
 
 To build and upload, use the CLI command:
