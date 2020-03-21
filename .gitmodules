@@ -1,0 +1,3 @@
+[submodule "lib/Adafruit_FONA"]
+	path = lib/Adafruit_FONA
+	url = https://github.com/Sustaingineering/Adafruit_FONA.git
